@@ -1,8 +1,19 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Bradley Hand ITC"; //, Helvetica, Arial, sans-serif;
+  text-align: center;
+  //background-color:Tomato;
+  color: white;
+  background: black;
+  //background-image: url("simple.png");
+
+
 }
 
 a {
-  color: #00B7FF;
+  color: #c1c0bf;
+}
+
+h1 {
+  font-size: 45px;
 }
