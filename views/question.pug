@@ -1,5 +1,11 @@
 extends layout
 
 block content 
-  h1 I'm a question
-  p My Id is #{id}
+  // Title
+  h1= question.title
+  p= question.content
+  // each answer in question.answers
+  //   div
+  //     h3= answer.title
+  //     p= answer.content
+  //     b By #{answer.author}

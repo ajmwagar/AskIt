@@ -1,9 +1,11 @@
 let mongoose = require('mongoose');
 
 // Question model
-export var questionSchema = new mongoose.Schema({
+exports.schema = new mongoose.Schema({
   // Id of user who posted it
-  poster: String,
+  author: String,
+  // Title of the question
+  title: String,
   // Content of answer
   content: String,
   // IDs of answers
