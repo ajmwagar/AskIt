@@ -1,0 +1,13 @@
+extends layout
+
+block content 
+  // Title
+  // h1= question.title
+  // p= question.content
+  h1 Top Questions
+  ul
+    each q in feed
+      li 
+        a(href="/q/" + q._id) #{q.title}
+      // p= answer.content
+      // b By #{answer.author}

@@ -3,8 +3,11 @@ var router = express.Router();
 var models = require('../models');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'AskIt' });
+router.get('/', async (req, res, next) => {
+
+  let q = await models.Question.find({}); 
+  console.log(q);
+  res.render('feed', { title: 'AskIt', feed: q });
 });
 
 router.get('/q/:id', async (req, res, next) => {
