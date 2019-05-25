@@ -10,17 +10,27 @@ router.get('/', async (req, res, next) => {
   res.render('feed', { title: 'AskIt', feed: q });
 });
 
+router.get('/submit', async (req, res, next) => {
+  res.render('submit', {});
+});
+
+router.post('/submit', async (req, res, next) => {
+  if (req.body.title != '' && req.body.content != '' && req.body.author != ''){
+    let q = new models.Question({
+      author: req.body.author,
+      title: req.body.title,
+      content: req.body.content,
+      answers: ['']
+    });
+    q.save();
+    res.redirect('/q/' + q.id);
+  }
+  else {
+    res.redirect('/');
+  }
+});
+
 router.get('/q/:id', async (req, res, next) => {
-    // let q = new models.Question({
-    //   author: 'Avery Wagar',
-    //   title: 'What is 1 + 1?',
-    //   content: 'What is 1 + 1',
-    //   answers: ['']
-    // });
-
-    // console.log(q);
-
-    // q.save();
   console.log(req.params.id);
 
   let q = await models.Question.findById(req.params.id); 

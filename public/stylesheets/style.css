@@ -12,8 +12,5 @@ body {
 
 a {
   color: #c1c0bf;
-}
-
-h1 {
-  font-size: 45px;
+  padding-left: 1vw;
 }
