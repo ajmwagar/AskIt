@@ -1,6 +1,6 @@
 body {
   /* //padding: 50px; */
-  font: 20px "Segoe Script"; //, Helvetica, Arial, sans-serif;
+  font: 20px "Arial"; //, Helvetica, Arial, sans-serif;
   /* text-align: center; */
   /* //background-color:Tomato; */
   color: white;
@@ -8,8 +8,6 @@ body {
   /* //background-image: url("simple.png"); */
 
 }
-
-
 
 h2 {
   text-align: center;
@@ -32,6 +30,7 @@ h4 {
 h5 {
   text-align: center;
   font-size: 25px;
+  //padding: 0px;
 }
 
 a {
@@ -52,4 +51,11 @@ input {
 
 search-bar {
   margin-right: 20px;
+}
+
+h6 {
+  text-align: center;
+  position: relative;
+  font-size: 25px;
+  bottom: -900px;
 }

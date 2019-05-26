@@ -4,7 +4,6 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    //h6
     block header
       //h1= title
       h2= title
@@ -23,8 +22,7 @@ html
           |
           |
           br
-          //br
-      //div(class=cat-bar)
+
       h5
         div(id=cat-bar)
           a(href="/") MATH
@@ -40,7 +38,11 @@ html
           a(href="/") OTHER
           |
           |
-
+      h6
+        div(id=bottom-bar)
+          a(href="/about us") ABOUT US
+          |
+          |
           //footer.footer
           //.container
           //a(href="/about us") ABOUT US
@@ -49,11 +51,3 @@ html
 
 
         block content
-      body
-        block closer
-          h1
-          h6
-          div(id=footer)
-          a(href="/about us") ABOUT US
-          |
-          |
