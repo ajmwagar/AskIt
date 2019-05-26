@@ -10,6 +10,11 @@ router.get('/', async (req, res, next) => {
   res.render('feed', { title: 'AskIT', feed: q });
 });
 
+router.get('/about', async (req, res, next) => {
+
+  res.render('about');
+});
+
 router.get('/submit', async (req, res, next) => {
   res.render('submit', {});
 });
