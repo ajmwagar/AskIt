@@ -7,7 +7,24 @@ html
     block header
       h1= title
       div(id=nav-bar)
-        a(href="/") feed
-        a(href="/profile") profile
-    input(type='text', placeholder='Search..')
+        a(href="/") FEED
+        |
+        a(href="/submit") ASK A QUESTION
+        |
+        a(href="/profile") PROFILE
+        |
+        |
+      div(id=cat-bar)
+        a(href="/") MATH
+        |
+        a(href="/") SCIENCE
+        |
+        a(href="/") HISTORY
+        |
+        a(href="/") COMPUTER SCIENCE
+        |
+        a(href="/") MUSIC
+        |
+        |
+        input(type='text', placeholder='Search..')
     block content
