@@ -46,4 +46,43 @@ router.get('/q/:id', async (req, res, next) => {
   res.render('question', { question: q });
 });
 
+router.get('/q/up/:id', async (req, res, next) => {
+  console.log(req.params.id);
+
+  let q = await models.Question.findById(req.params.id);
+
+  console.log(q);
+
+  if (q.votes){
+    q.votes += 1;
+  }
+  else {
+    q.votes = 0;
+  }
+  q.save();
+  res.redirect('/q/' + q.id);
+  // TODO: get question from id
+  //res.render('question', { question: q });
+});
+
+router.get('/q/down/:id', async (req, res, next) => {
+  console.log(req.params.id);
+
+  let q = await models.Question.findById(req.params.id);
+
+  console.log(q);
+  if (q.votes) {
+  q.votes -= 1;
+}
+else {
+  q.votes = 0;
+}
+
+  q.save();
+  res.redirect('/q/' + q.id);
+  // TODO: get question from id
+  //res.render('question', { question: q });
+});
+
+
 module.exports = router;

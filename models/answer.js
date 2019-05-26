@@ -8,4 +8,5 @@ exports.schema = new mongoose.Schema({
   content: String,
   // ID of question
   question: String
+
 })

@@ -4,6 +4,7 @@ block content
   // Title
   h1= question.title
   h4 Asked by #{question.author}
+  h5= question.votes
   p= question.content
   h2 Answers
   each answer in question.answers
@@ -17,23 +18,24 @@ block content
       label(for='answer') Submit your answer: 
       input#answer(type='textarea', placeholder="Submit an Answer")
   button.btn.btn-primary(type='submit') AnswerIt!
-  form(method='VOTE' action='/vote')
-    h5 The button
-      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-      style.
-        .fa {
-        font-size: 50px;
-        cursor: pointer;
-        user-select: none;
-        }
-        .fa:hover {
-        color: darkblue;
-        }
-    body
-      p Click on the icon to toggle between thumbs-up and thumbs-down (like/dislike):
-      i.fa.fa-thumbs-up(onclick='myFunction(this)')
-      script.
-        function myFunction(x) {
-        x.classList.toggle("fa-thumbs-down");
-        }
+  h5
+    script.
+      function clickCounter() {
+      if (typeof(Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+      } else {
+      localStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+      } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+      }
+  body
+    p
+      button(onclick='clickCounter()', type='button') Rate!
+    p=question.votes
+  
+
   
