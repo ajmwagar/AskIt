@@ -3,6 +3,7 @@ extends layout
 block content 
   // Title
   h1= question.title
+  h4 Asked by #{question.author}
   p= question.content
   // each answer in question.answers
   //   div

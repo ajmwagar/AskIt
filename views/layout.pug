@@ -5,10 +5,28 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block header
-      h1= title
+      h1 AskIt
       div(id=nav-bar)
         a(href="/") feed
+        |
+        a(href="/submit") ask a question
+        |
         a(href="/profile") profile
+        |
+        |
+      div(id=cat-bar)
+        a(href="/") MATH
+        |
+        a(href="/") SCIENCE
+        |
+        a(href="/") HISTORY
+        |
+        a(href="/") COMPUTER SCIENCE
+        |
+        a(href="/") MUSIC
+        |
+        |
+      
     block content
     app.get('/search/:query', function(req, res) {
       let results = searchEngine.runSearch(req.query);
