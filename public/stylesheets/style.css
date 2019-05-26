@@ -1,6 +1,6 @@
 body {
   //padding: 50px;
-  font: 20px "Bradley Hand ITC"; //, Helvetica, Arial, sans-serif;
+  font: 20px "Segoe Script"; //, Helvetica, Arial, sans-serif;
   text-align: center;
   //background-color:Tomato;
   color: white;
@@ -13,6 +13,7 @@ body {
 a {
   color: #c1c0bf;
   padding-left: 1vw;
+
 }
 
 ul {
