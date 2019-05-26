@@ -17,3 +17,23 @@ block content
       label(for='answer') Submit your answer: 
       input#answer(type='textarea', placeholder="Submit an Answer")
   button.btn.btn-primary(type='submit') AnswerIt!
+  form(method='VOTE' action='/vote')
+    h5 The button
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+      style.
+        .fa {
+        font-size: 50px;
+        cursor: pointer;
+        user-select: none;
+        }
+        .fa:hover {
+        color: darkblue;
+        }
+    body
+      p Click on the icon to toggle between thumbs-up and thumbs-down (like/dislike):
+      i.fa.fa-thumbs-up(onclick='myFunction(this)')
+      script.
+        function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+        }
+  
