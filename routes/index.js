@@ -5,9 +5,9 @@ var models = require('../models');
 /* GET home page. */
 router.get('/', async (req, res, next) => {
 
-  let q = await models.Question.find({}); 
+  let q = await models.Question.find({});
   console.log(q);
-  res.render('feed', { title: 'AskIt', feed: q });
+  res.render('feed', { title: 'AskIT', feed: q });
 });
 
 router.get('/submit', async (req, res, next) => {
@@ -38,7 +38,7 @@ app.get('/search/:query', function(req, res) {
 router.get('/q/:id', async (req, res, next) => {
   console.log(req.params.id);
 
-  let q = await models.Question.findById(req.params.id); 
+  let q = await models.Question.findById(req.params.id);
 
   console.log(q);
 
