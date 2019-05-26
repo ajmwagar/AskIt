@@ -26,9 +26,4 @@ html
         a(href="/") MUSIC
         |
         |
-      
     block content
-    app.get('/search/:query', function(req, res) {
-      let results = searchEngine.runSearch(req.query);
-      res.render('results', { results: results });
-    });

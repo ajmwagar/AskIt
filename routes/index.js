@@ -30,6 +30,11 @@ router.post('/submit', async (req, res, next) => {
   }
 });
 
+app.get('/search/:query', function(req, res) {
+  let results = searchEngine.runSearch(req.query);
+  res.render('results', { results: results });
+});
+
 router.get('/q/:id', async (req, res, next) => {
   console.log(req.params.id);
 
