@@ -8,6 +8,6 @@ block content
   ul
     each q in feed
       li 
-        a(href="/q/" + q._id) #{q.title}
+        a(href="/q/" + q._id) #{q.title} | #{q.votes} points
       // p= answer.content
       // b By #{answer.author}
