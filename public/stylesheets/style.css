@@ -20,6 +20,31 @@ h3 {
   position: absolute;
   top: 23px;
   right: 20px;
+
+  input[type=text]
+  padding: 10px;
+  font-size: 17px;
+  float: left;
+  width: 80%;
+}
+
+h3 button{
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid gray;
+  border-left: none;
+  cursor: pointer;
+
+}
+
+h3::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 h4 {
