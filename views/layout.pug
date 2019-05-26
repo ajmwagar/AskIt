@@ -5,34 +5,39 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block header
-      h1= title
-      div(id=search-bar)
+      //h1= title
+      h2= title
+      //div(id=search-bar)
+      h3
+        div(id=search-bar)
         input(type='text', placeholder='Search..')
         |
-      div(id=nav-bar)
-        a(href="/") FEED
-        |
-        a(href="/submit") ASK A QUESTION
-        |
-        a(href="/profile") PROFILE
-        |
-        |
-        br
-        br
+      h4
+        div(id=nav-bar)
+          a(href="/") FEED
+          |
+          a(href="/submit") ASK A QUESTION
+          |
+          a(href="/profile") PROFILE
+          |
+          |
+          br
+          //br
       //div(class=cat-bar)
-      div(id=cat-bar)
-        a(href="/") MATH
-        |
-        a(href="/") SCIENCE
-        |
-        a(href="/") HISTORY
-        |
-        a(href="/") COMPUTER SCIENCE
-        |
-        a(href="/") MUSIC
-        |
-        a(href="/") OTHER
-        |
-        |
+      h5
+        div(id=cat-bar)
+          a(href="/") MATH
+          |
+          a(href="/") SCIENCE
+          |
+          a(href="/") HISTORY
+          |
+          a(href="/") COMPUTER SCIENCE
+          |
+          a(href="/") MUSIC
+          |
+          a(href="/") OTHER
+          |
+          |
 
-    block content
+        block content
