@@ -20,7 +20,7 @@ router.post('/submit', async (req, res, next) => {
       author: req.body.author,
       title: req.body.title,
       content: req.body.content,
-      answers: ['']
+      answers: []
     });
     q.save();
     res.redirect('/q/' + q.id);
@@ -45,5 +45,26 @@ router.get('/q/:id', async (req, res, next) => {
   // TODO: get question from id
   res.render('question', { question: q });
 });
+
+router.post('/q/answer/:id', async (req,res,next) => {
+  console.log("Answer");
+  let answer = req.body.answer;
+
+  let q = await models.Question.findById(req.params.id);
+
+  let ans = new models.Answer({
+    author: "Anyonomous",
+    content: req.body.answer,
+    question: req.params.id
+  });
+
+  ans.save();
+
+  q.answers.push(ans);
+
+  await models.Question.findByIdAndUpdate(req.params.id, { $set: {answers: q.answers} }, {upsert: true, useFindAndModify: false});
+
+  res.redirect('/q/'+req.params.id);
+})
 
 module.exports = router;
