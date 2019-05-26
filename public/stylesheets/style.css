@@ -3,22 +3,33 @@ body {
   font: 20px "Arial"; //, Helvetica, Arial, sans-serif;
   /* text-align: center; */
   /* //background-color:Tomato; */
-  color: white;
-  background: #444443;
+  color: #444443;
+  //background: #444443;
+  background: #E2EFFF;
   /* //background-image: url("simple.png"); */
+  margin: 0;
 
 }
 
+/*h1 {
+  background-color:gray;
+} */
 h2 {
+  padding: 20px;
+  background-color: white;
+  height: 100%;
+  //background-size: cover;
+  width: 100%;
+  background-position: center;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 h3 {
   text-align: right;
   //top: 50px;
   position: absolute;
-  top: 23px;
+  top: 5px;
   right: 20px;
 
   input[type=text]
@@ -50,17 +61,17 @@ h3::after {
 h4 {
   text-align: center;
   font-size: 25px;
+  backgroud: white;
 }
 
 h5 {
   text-align: center;
   font-size: 25px;
-  //padding: 0px;
   margin: 0px;
 }
 
 a {
-  color: #c1c0bf;
+  color: #707070;
   padding-left: 1vw;
   padding: 10px;
 
@@ -68,6 +79,7 @@ a {
 
 ul {
   list-style-type: none;
+  //background-color:gray;
 }
 
 input {
