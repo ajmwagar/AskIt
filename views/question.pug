@@ -5,8 +5,15 @@ block content
   h1= question.title
   h4 Asked by #{question.author}
   p= question.content
-  // each answer in question.answers
-  //   div
-  //     h3= answer.title
-  //     p= answer.content
-  //     b By #{answer.author}
+  h2 Answers
+  each answer in question.answers
+    div
+      h3= answer.title
+      p= answer.content
+      // b By #{answer.author}
+
+  form(method='POST' action='/answer')
+    div.form-group
+      label(for='answer') Submit your answer: 
+      input#answer(type='textarea', placeholder="Submit an Answer")
+  button.btn.btn-primary(type='submit') AnswerIt!
