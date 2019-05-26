@@ -4,10 +4,10 @@ body {
   /* text-align: center; */
   /* //background-color:Tomato; */
   color: #444443;
-  //background: #444443;
   background: #E2EFFF;
   /* //background-image: url("simple.png"); */
   margin: 0;
+  padding-left: 2vh;
 
 }
 
@@ -18,10 +18,9 @@ h2 {
   padding: 20px;
   background-color: white;
   height: 100%;
-  //background-size: cover;
   width: 100%;
-  background-position: center;
-  text-align: center;
+  /* background-position: center; */
+  /* text-align: center; */
   font-size: 50px;
 }
 
@@ -32,7 +31,6 @@ h3 {
   top: 5px;
   right: 20px;
 
-  input[type=text]
   padding: 10px;
   font-size: 17px;
   float: left;
@@ -52,22 +50,8 @@ h3 button{
 
 }
 
-h3::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 h4 {
-  text-align: center;
   font-size: 25px;
-  backgroud: white;
-}
-
-h5 {
-  text-align: center;
-  font-size: 25px;
-  margin: 0px;
 }
 
 a {
@@ -79,12 +63,10 @@ a {
 
 ul {
   list-style-type: none;
-  //background-color:gray;
 }
 
 input {
   padding-left: 10px;
-
 }
 
 search-bar {
@@ -92,7 +74,6 @@ search-bar {
 }
 
 h6 {
-  text-align: center;
   position: relative;
   font-size: 25px;
   bottom: 0px;

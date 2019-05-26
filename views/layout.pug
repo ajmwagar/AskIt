@@ -1,19 +1,18 @@
 doctype html
 html
   head
-    title= title
+    title AskIT
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     h6
     block header
       //h1= title
-      h2= title
+      h2 AskIT 
       //div(id=search-bar)
       h3
         div(id=search-bar)
-        input(type='text', placeholder='Search..')
-        //button(type = 'submit')
-        a(class='button' href='google.com') search
+          input(type='text', placeholder='Search..')
+          a(class='button' href='') search
         |
       h4
         div(id=nav-bar)
@@ -21,31 +20,31 @@ html
           |
           a(href="/submit") ASK A QUESTION
           |
-          a(href="/profile") PROFILE
-          |
+          // a(href="/profile") PROFILE
+          // |
           //a(href="/about us") ABOUT US
           |
           |
           br
           //br
       //div(class=cat-bar)
-      h5
-        div(id=cat-bar)
-          a(href="/") MATH
-          |
-          a(href="/") SCIENCE
-          |
-          a(href="/") HISTORY
-          |
-          a(href="/") COMPUTER SCIENCE
-          |
-          a(href="/") MUSIC
-          |
-          a(href="/") OTHER
-          |
-          |
+      // h5
+      //   div(id=cat-bar)
+      //     a(href="/") MATH
+      //     |
+      //     a(href="/") SCIENCE
+      //     |
+      //     a(href="/") HISTORY
+      //     |
+      //     a(href="/") COMPUTER SCIENCE
+      //     |
+      //     a(href="/") MUSIC
+      //     |
+      //     a(href="/") OTHER
+      //     |
+      //     |
 
-        block content
+      block content
         body
         block closer
           h1

@@ -3,8 +3,8 @@ extends layout
 block content 
   // Title
   h1= question.title
-  h4 Asked by #{question.author}
   p= question.content
+  h6 Asked by #{question.author}
   h2 Answers
   each answer in question.answers
     div
